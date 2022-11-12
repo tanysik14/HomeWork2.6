@@ -12,11 +12,14 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeNameLabel: UILabel!
     @IBOutlet var emojiLabel: UILabel!
     
+
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+welcomeNameLabel
 
-      
     }
     
     

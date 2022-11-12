@@ -17,30 +17,33 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         resulrButtonLogIn()
         buttonForgoutName()
+     
     }
     
     
     @IBAction func resulrButtonLogIn() {
         if nameText.text == "Tatsiana" && passwordText.text == "Pauliukova" {
-            func prepare(for seque: UIStoryboardSegue, sender: Any?) {
-                guard seque.destination is WelcomeViewController else { return }
+            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                let welcomeVC = segue.source as? WelcomeViewController
+                welcomeVC?.welcomeNameLabel.text = "Wellcome, \(nameText.text)!"
             }
         } else {
             showAlert(title: "Invalid login or password", message:  "Please, enter correct login and password")
         }
     }
-
+    
     
     @IBAction func buttonForgoutName() {
-     showAlert(title: "Oops!", message: "Your name is Tatsiana")
+        showAlert(title: "Oops!", message: "Your name is Tatsiana")
     }
     
     
     @IBAction func buttonForgoutPassword() {
         showAlert(title: "Oops!", message: "Your password is Pauliukova")
     }
-    
+
 }
+
     
 extension LoginViewController {
     func showAlert(title: String, message: String) {

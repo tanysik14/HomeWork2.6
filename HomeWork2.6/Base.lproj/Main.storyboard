@@ -40,6 +40,7 @@
                                 </state>
                                 <connections>
                                     <action selector="resulrButtonLogIn" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nl-LR-1V6"/>
+                                    <segue destination="2FI-wC-wWc" kind="modal" id="fwc-h4-0qY"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-db-G9j">
@@ -80,7 +81,6 @@
                     <connections>
                         <outlet property="nameText" destination="k6Z-Mx-OnL" id="JA2-dt-4fs"/>
                         <outlet property="passwordText" destination="IvV-sZ-6Sn" id="7Ec-4j-gmU"/>
-                        <segue destination="2FI-wC-wWc" kind="presentation" id="bEI-6J-KFM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
