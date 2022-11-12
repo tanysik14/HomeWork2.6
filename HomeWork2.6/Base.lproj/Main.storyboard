@@ -21,15 +21,13 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6Z-Mx-OnL">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IvV-sZ-6Sn">
                                         <rect key="frame" x="0.0" y="54" width="350" height="34"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -45,22 +43,22 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-db-G9j">
-                                <rect key="frame" x="25.666666666666657" y="414" width="339" height="30"/>
+                                <rect key="frame" x="25.333333333333343" y="414" width="339.33333333333326" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaj-rS-CRU">
-                                        <rect key="frame" x="0.0" y="0.0" width="131" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgut User name?"/>
                                         <connections>
-                                            <action selector="buttonForgoutName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4eZ-OX-oig"/>
+                                            <action selector="buttonForgoutName" destination="BYZ-38-t0r" eventType="touchUpInside" id="QnN-ma-5ih"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mw-ye-tm7">
-                                        <rect key="frame" x="208" y="0.0" width="131" height="30"/>
+                                        <rect key="frame" x="208.33333333333331" y="0.0" width="131" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgout Password?"/>
                                         <connections>
-                                            <action selector="buttonForgoutPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EvX-D4-sc5"/>
+                                            <action selector="buttonForgoutPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAN-y6-PIq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,6 +69,7 @@
                         <constraints>
                             <constraint firstItem="QqW-db-G9j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="07f-5q-jrU"/>
                             <constraint firstItem="QqW-db-G9j" firstAttribute="top" secondItem="uX6-oa-rbq" secondAttribute="bottom" constant="30" id="By6-w5-4FU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uaj-rS-CRU" secondAttribute="trailing" constant="233.33333333333334" id="KBg-F7-oyH"/>
                             <constraint firstItem="pAz-VL-YVP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="LOl-r8-M9m"/>
                             <constraint firstItem="uX6-oa-rbq" firstAttribute="top" secondItem="pAz-VL-YVP" secondAttribute="bottom" constant="40" id="Z0b-me-rgb"/>
                             <constraint firstItem="uX6-oa-rbq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ejX-vZ-S5H"/>
@@ -81,12 +80,12 @@
                     <connections>
                         <outlet property="nameText" destination="k6Z-Mx-OnL" id="JA2-dt-4fs"/>
                         <outlet property="passwordText" destination="IvV-sZ-6Sn" id="7Ec-4j-gmU"/>
-                        <segue destination="2FI-wC-wWc" kind="show" id="oEs-Vn-Djp"/>
+                        <segue destination="2FI-wC-wWc" kind="presentation" id="bEI-6J-KFM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116.92307692307692" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="198" y="-4"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="EEm-U9-nAY">
@@ -131,7 +130,6 @@
                             <constraint firstItem="vji-7R-nhI" firstAttribute="top" secondItem="0g9-MT-Srd" secondAttribute="bottom" constant="30" id="sQN-Vn-Thy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0FJ-tI-kJm"/>
                     <connections>
                         <outlet property="emojiLabel" destination="vji-7R-nhI" id="e4n-C4-osJ"/>
                         <outlet property="welcomeNameLabel" destination="0g9-MT-Srd" id="TFQ-EU-8bY"/>
@@ -139,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eP-Ud-snN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="4"/>
+            <point key="canvasLocation" x="1194" y="-4"/>
         </scene>
     </scenes>
     <resources>

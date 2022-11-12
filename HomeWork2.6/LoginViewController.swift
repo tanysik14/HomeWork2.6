@@ -15,29 +15,29 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      resulrButtonLogIn()
+        resulrButtonLogIn()
+        buttonForgoutName()
     }
     
-
+    
     @IBAction func resulrButtonLogIn() {
-        if nameText.text == "User" || passwordText.text == "Password" {
+        if nameText.text == "Tatsiana" && passwordText.text == "Pauliukova" {
             func prepare(for seque: UIStoryboardSegue, sender: Any?) {
                 guard seque.destination is WelcomeViewController else { return }
             }
         } else {
-                showAlert(title: "Invalid login or password", message:  "Please, enter correct login and password")
-            }
+            showAlert(title: "Invalid login or password", message:  "Please, enter correct login and password")
         }
-  
+    }
+
     
     @IBAction func buttonForgoutName() {
-     showAlert(title: "Oops!", message: "Your name is User")
-  
+     showAlert(title: "Oops!", message: "Your name is Tatsiana")
     }
     
     
     @IBAction func buttonForgoutPassword() {
-     
+        showAlert(title: "Oops!", message: "Your password is Pauliukova")
     }
     
 }
@@ -45,9 +45,8 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        present(alert, animated: true)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-
+            self.passwordText.text = ""
         }
         
         alert.addAction(okAction)
