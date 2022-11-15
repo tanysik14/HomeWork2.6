@@ -12,19 +12,16 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeNameLabel: UILabel!
     @IBOutlet var emojiLabel: UILabel!
     
-   var name = ""
-
+    var name: String = ""
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        welcomeNameLabel.text = name
         emojiLabel.text = "👋"
-      welcomeNameLabel.text = name
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard  let loginVC = segue.source as? LoginViewController else { return }
-        welcomeNameLabel.text = ("Welcome,\(loginVC.nameTextLogin.text ?? "")!")
-    }
     
     
     @IBAction func buttonOut(_ sender: Any) {

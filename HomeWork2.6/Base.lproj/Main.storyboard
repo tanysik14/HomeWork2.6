@@ -40,7 +40,6 @@
                                 </state>
                                 <connections>
                                     <action selector="resulrButtonLogIn" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nl-LR-1V6"/>
-                                    <segue destination="2FI-wC-wWc" kind="presentation" id="U69-0W-3wl"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-db-G9j">
@@ -81,6 +80,7 @@
                     <connections>
                         <outlet property="nameTextLogin" destination="k6Z-Mx-OnL" id="JA2-dt-4fs"/>
                         <outlet property="passwordText" destination="IvV-sZ-6Sn" id="7Ec-4j-gmU"/>
+                        <segue destination="2FI-wC-wWc" kind="presentation" identifier="showW" id="lQO-f3-ArO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -130,7 +130,6 @@
                             <constraint firstItem="vji-7R-nhI" firstAttribute="top" secondItem="0g9-MT-Srd" secondAttribute="bottom" constant="30" id="sQN-Vn-Thy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ods-wg-bPr"/>
                     <connections>
                         <outlet property="emojiLabel" destination="vji-7R-nhI" id="e4n-C4-osJ"/>
                         <outlet property="welcomeNameLabel" destination="0g9-MT-Srd" id="TFQ-EU-8bY"/>

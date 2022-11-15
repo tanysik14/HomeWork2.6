@@ -12,37 +12,30 @@ class LoginViewController: UIViewController {
     @IBOutlet var nameTextLogin: UITextField!
     @IBOutlet var passwordText: UITextField!
     
-    var nameTextLoginT: String!
-    var passwordTextT: String!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        resulrButtonLogIn()
-    
+        
+
+    @IBAction func resulrButtonLogIn() {
+        guard nameTextLogin.text == "Tatsiana" && passwordText.text == "Pauliukova" else {
+            showAlert(title: "Invalid login or password", message:  "Please, enter correct login and password")
+            return
+        }
+        performSegue(withIdentifier: "showW", sender: nil)
     }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.source as? WelcomeViewController else { return }
-        welcomeVC.welcomeNameLabel.text = ("Welcome,\(nameTextLogin.text ?? "")!")
-   
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.name = "Welcome,\(nameTextLogin.text ?? "")!"
     }
-    
-    
-       @IBAction func resulrButtonLogIn() {
-           guard nameTextLogin.text != "Tatsiana" && passwordText.text != "Pauliukova" else {
-               showAlert(title: "Invalid login or password", message:  "Please, enter correct login and password")
-               return
-           }
-            }
    
   
   
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            view.endEditing(true)
+        view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
+    
     
     
     @IBAction func buttonForgoutName() {
@@ -53,7 +46,7 @@ class LoginViewController: UIViewController {
     @IBAction func buttonForgoutPassword() {
         showAlert(title: "Oops!", message: "Your password is Pauliukova")
     }
-
+    
 }
 
     
@@ -65,7 +58,6 @@ extension LoginViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
-        
     }
 }
 
