@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000598A42927CFAA00239A1F /* UserViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000598A32927CFAA00239A1F /* UserViewControler.swift */; };
+		000598A62927D51400239A1F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000598A52927D51400239A1F /* User.swift */; };
 		000C5826291FA130002FD5D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C5825291FA130002FD5D5 /* AppDelegate.swift */; };
 		000C5828291FA130002FD5D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C5827291FA130002FD5D5 /* SceneDelegate.swift */; };
 		000C582A291FA130002FD5D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C5829291FA130002FD5D5 /* LoginViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000598A32927CFAA00239A1F /* UserViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControler.swift; sourceTree = "<group>"; };
+		000598A52927D51400239A1F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		000C5822291FA130002FD5D5 /* HomeWork2.6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork2.6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		000C5825291FA130002FD5D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		000C5827291FA130002FD5D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00050ADD2927C5F500239DC8 /* ViewControlers */ = {
+			isa = PBXGroup;
+			children = (
+				000C5829291FA130002FD5D5 /* LoginViewController.swift */,
+				000C5839291FC56A002FD5D5 /* WelcomeViewController.swift */,
+				000598A32927CFAA00239A1F /* UserViewControler.swift */,
+			);
+			path = ViewControlers;
+			sourceTree = "<group>";
+		};
+		00050ADE2927C60E00239DC8 /* SuportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				000C5827291FA130002FD5D5 /* SceneDelegate.swift */,
+				000C5825291FA130002FD5D5 /* AppDelegate.swift */,
+			);
+			path = SuportFiles;
+			sourceTree = "<group>";
+		};
+		00050ADF2927C63F00239DC8 /* Storybords */ = {
+			isa = PBXGroup;
+			children = (
+				000C582B291FA130002FD5D5 /* Main.storyboard */,
+				000C5830291FA131002FD5D5 /* LaunchScreen.storyboard */,
+			);
+			path = Storybords;
+			sourceTree = "<group>";
+		};
+		00050AE12927C68300239DC8 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				000598A52927D51400239A1F /* User.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
 		000C5819291FA130002FD5D5 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +98,11 @@
 		000C5824291FA130002FD5D5 /* HomeWork2.6 */ = {
 			isa = PBXGroup;
 			children = (
-				000C5825291FA130002FD5D5 /* AppDelegate.swift */,
-				000C5827291FA130002FD5D5 /* SceneDelegate.swift */,
-				000C5829291FA130002FD5D5 /* LoginViewController.swift */,
-				000C5839291FC56A002FD5D5 /* WelcomeViewController.swift */,
-				000C582B291FA130002FD5D5 /* Main.storyboard */,
+				00050AE12927C68300239DC8 /* Modals */,
+				00050ADD2927C5F500239DC8 /* ViewControlers */,
+				00050ADF2927C63F00239DC8 /* Storybords */,
+				00050ADE2927C60E00239DC8 /* SuportFiles */,
 				000C582E291FA131002FD5D5 /* Assets.xcassets */,
-				000C5830291FA131002FD5D5 /* LaunchScreen.storyboard */,
 				000C5833291FA131002FD5D5 /* Info.plist */,
 			);
 			path = HomeWork2.6;
@@ -143,6 +181,8 @@
 			files = (
 				000C582A291FA130002FD5D5 /* LoginViewController.swift in Sources */,
 				000C583A291FC56A002FD5D5 /* WelcomeViewController.swift in Sources */,
+				000598A62927D51400239A1F /* User.swift in Sources */,
+				000598A42927CFAA00239A1F /* UserViewControler.swift in Sources */,
 				000C5826291FA130002FD5D5 /* AppDelegate.swift in Sources */,
 				000C5828291FA130002FD5D5 /* SceneDelegate.swift in Sources */,
 			);

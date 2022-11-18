@@ -12,46 +12,50 @@ class LoginViewController: UIViewController {
     @IBOutlet var nameTextLogin: UITextField!
     @IBOutlet var passwordText: UITextField!
     
+    private let login = "1"
+    private let password = "1"
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.name = login
+    }
+    
         
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
 
+    
     @IBAction func resulrButtonLogIn() {
-        guard nameTextLogin.text == "Tatsiana" && passwordText.text == "Pauliukova" else {
-            showAlert(title: "Invalid login or password", message:  "Please, enter correct login and password")
+        guard nameTextLogin.text == login && passwordText.text == password else {
+            showAlert(
+                title: "Invalid login or password",
+                message:  "Please, enter correct login and password"
+            )
             return
         }
         performSegue(withIdentifier: "showW", sender: nil)
     }
     
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.name = "Welcome,\(nameTextLogin.text ?? "")!"
-    }
-   
-  
-  
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-        super.touchesBegan(touches, with: event)
-    }
-    
-    
-    
     @IBAction func buttonForgoutName() {
-        showAlert(title: "Oops!", message: "Your name is Tatsiana")
+        showAlert(title: "Oops!", message: "Your name is \(login)")
     }
     
     
     @IBAction func buttonForgoutPassword() {
-        showAlert(title: "Oops!", message: "Your password is Pauliukova")
+        showAlert(title: "Oops!", message: "Your password is \(password)")
     }
     
-}
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        nameTextLogin.text = ""
+        passwordText.text = ""
+    }
+  
 
-    
-extension LoginViewController {
-    func showAlert(title: String, message: String) {
+   private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
             self.passwordText.text = ""
