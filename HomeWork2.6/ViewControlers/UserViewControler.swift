@@ -8,13 +8,10 @@
 import UIKit
 
 class UserViewControler: UIViewController {
-
-    @IBOutlet var labelName: UITextField!
-    @IBOutlet var textEssay: UITextField!
     
     
-    
-    
+    @IBOutlet var labelName: UILabel!
+    @IBOutlet var textEssay: UILabel!
     
     
     
@@ -22,5 +19,10 @@ class UserViewControler: UIViewController {
         
     }
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
 }
