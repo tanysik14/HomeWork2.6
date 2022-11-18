@@ -11,22 +11,24 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var nameTextLogin: UITextField!
     @IBOutlet var passwordText: UITextField!
+        
     
-    private let login = "1"
-    private let password = "1"
+    private let login = User.getUser().login
+    private let password = User.getUser().password
     
-    
+
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.name = login
     }
     
-        
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-
+    
     
     @IBAction func resulrButtonLogIn() {
         guard nameTextLogin.text == login && passwordText.text == password else {
@@ -53,9 +55,9 @@ class LoginViewController: UIViewController {
         nameTextLogin.text = ""
         passwordText.text = ""
     }
-  
-
-   private func showAlert(title: String, message: String) {
+    
+    
+    private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
             self.passwordText.text = ""
@@ -63,5 +65,7 @@ class LoginViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
 }
+ 
 

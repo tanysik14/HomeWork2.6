@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		000598A42927CFAA00239A1F /* UserViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000598A32927CFAA00239A1F /* UserViewControler.swift */; };
 		000598A62927D51400239A1F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000598A52927D51400239A1F /* User.swift */; };
+		000598A82928149000239A1F /* PicthersViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000598A72928149000239A1F /* PicthersViewControllers.swift */; };
 		000C5826291FA130002FD5D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C5825291FA130002FD5D5 /* AppDelegate.swift */; };
 		000C5828291FA130002FD5D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C5827291FA130002FD5D5 /* SceneDelegate.swift */; };
 		000C582A291FA130002FD5D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C5829291FA130002FD5D5 /* LoginViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		000598A32927CFAA00239A1F /* UserViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControler.swift; sourceTree = "<group>"; };
 		000598A52927D51400239A1F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		000598A72928149000239A1F /* PicthersViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicthersViewControllers.swift; sourceTree = "<group>"; };
 		000C5822291FA130002FD5D5 /* HomeWork2.6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork2.6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		000C5825291FA130002FD5D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		000C5827291FA130002FD5D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 				000C5829291FA130002FD5D5 /* LoginViewController.swift */,
 				000C5839291FC56A002FD5D5 /* WelcomeViewController.swift */,
 				000598A32927CFAA00239A1F /* UserViewControler.swift */,
+				000598A72928149000239A1F /* PicthersViewControllers.swift */,
 			);
 			path = ViewControlers;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				000C583A291FC56A002FD5D5 /* WelcomeViewController.swift in Sources */,
 				000598A62927D51400239A1F /* User.swift in Sources */,
 				000598A42927CFAA00239A1F /* UserViewControler.swift in Sources */,
+				000598A82928149000239A1F /* PicthersViewControllers.swift in Sources */,
 				000C5826291FA130002FD5D5 /* AppDelegate.swift in Sources */,
 				000C5828291FA130002FD5D5 /* SceneDelegate.swift in Sources */,
 			);

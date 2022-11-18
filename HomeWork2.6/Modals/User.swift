@@ -6,7 +6,8 @@
 //
 
 struct User {
-    let login: String = ""
+    let login: String
+    let password: String
     let people: People
 }
   
@@ -18,25 +19,22 @@ struct People {
     let hobby: String
     let maritalStatus: String
     let presenceOfChildren: String
-    let myPictures: String
+}
+
+
+extension User {
     
-//    static let user = User(login: "Tatsiana", people: People(name: "Татьяна", lastName: "Павлюкова", age: 28, hobby: "Swift", maritalStatus: "замужем", presenceOfChildren: "есть, дочь Есения, 6 лет", myPictures: ""))
+    static func getUser() -> User {
+        User(login: "Tatsiana",
+             password: "Tanya",
+             people: People(
+                name: "Татьяна",
+                lastName: "Павлюкова",
+                age: 28,
+                hobby: "Swift",
+                maritalStatus: "Замужем",
+                presenceOfChildren: "одна дочь, 6 лет"
+             )
+        )
+    }
 }
-
-
-
-
-func getUser() -> User {
-    User(login: "Tatsiana",
-         people: People(
-            name: "Tatsiana",
-            lastName: "Pauliukova",
-            age: 28,
-            hobby: "Swift",
-            maritalStatus: "Married",
-            presenceOfChildren: "Have one daughter",
-            myPictures: ""
-         )
-    )
-}
-
